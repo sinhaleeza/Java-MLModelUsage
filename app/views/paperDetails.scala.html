@@ -1,0 +1,79 @@
+@import models.PublicationResults
+@(publicationResults: PublicationResults)
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Index of Papers</title>
+        <link rel="stylesheet" media="screen" href="/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/stylesheets/google-font-robotoSlab.css">
+
+        <script src="/javascripts/jquery-3.4.1.slim.min.js"></script>
+        <script src="/javascripts/popper.min.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        </head>
+    <body>
+
+        <br>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                <table>
+                    <tr>
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+                            <a class="navbar-brand" href="#">Paper Details</a>
+                        </nav>
+
+                        <br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col"><p class="card-text">Attribute</p></th>
+                                    <th scope="col"><p class="card-text">Value</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @for(publication <- publicationResults.getPublications) {
+                                    <tr>
+                                        <td><b><p class="card-text">Id</p></b></td>
+                                        <td><p class="card-text">@publication.getId()</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">Paper Title</p></b></td>
+                                        <td><p class="card-text">@publication.getTitle</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">Publication Channel</p></b></td>
+                                        <td><p class="card-text">@publication.getPublicationChannel()</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">Publication Time</p></b></td>
+                                        <td><p class="card-text">@publication.getTime()</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">EE</p></b></td>
+                                        <td><p class="card-text">@publication.getEe()</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">Authors</p></b></td>
+                                        <td><p class="card-text">@publication.getAuthors()</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b><p class="card-text">Content</p></b></td>
+                                        <td><p class="card-text">@publication.getContent()</p></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+This tutorial is intended for researchers and industry practitioners who are interested in modeling ontologies to support knowledge engineering and management, database modeling, business process modeling and enterprise information integration with a focus on practical demonstration. The tutorial gives a deeper insight for designing of ontologies and conceptual modeling.

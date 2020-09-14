@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">services.DBManipulation</node>
+    <node x="624.0" y="213.0">models.BasicSearchResults</node>
+    <node x="279.0" y="274.0">services.Search</node>
+    <node x="0.0" y="274.0">models.SpatialSearchResults</node>
+    <node x="445.0" y="0.0">controllers.SOCQueryController</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="469.0" y="341.0" />
+  <SelectedNodes>
+    <node>models.BasicSearchResults</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

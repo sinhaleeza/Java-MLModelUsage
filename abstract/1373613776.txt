@@ -1,0 +1,1 @@
+Web services are becoming widely deployed to implement the automation of business processes such as supply chain management, inventory tracking, and healthcare management, just to name a few. A Web service is a new breed of web application that supports interoperable application-to-application interaction over a network based on a set of XML standards.

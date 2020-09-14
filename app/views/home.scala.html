@@ -1,0 +1,67 @@
+@(indexList: Map[String,Set[String]])
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Index of Papers</title>
+        <link rel="stylesheet" media="screen" href="/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/stylesheets/google-font-robotoSlab.css">
+
+        <script src="/javascripts/jquery-3.4.1.slim.min.js"></script>
+        <script src="/javascripts/popper.min.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        </head>
+    <body>
+
+        <br>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                <table>
+                    <tr>
+                        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+                            <a class="navbar-brand" href="#">Categories</a>
+                        </nav>
+
+                        <br>
+
+
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col"><p class="card-text">ID</p></th>
+                                    <th scope="col"><p class="card-text">Category Name</p></th>
+                                    <th scope="col"><p class="card-text">Count of Papers</p></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for((key, value) <- indexList) {
+                                    <tr>
+                                        <td><p class="card-text">@key.trim().substring(8,key.trim().length())</p></td>
+                                    <td>
+                                        <form method="post" action="/paperList">
+                                        <input type="hidden" name="papers" id="papers" value="@value.toString()">
+                                            <button type="submit" class="btn btn-lg btn-info btn-block"><p class="card-text">@key</p></button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <p class="card-text">@value.size()</p>
+                                    </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+
+
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

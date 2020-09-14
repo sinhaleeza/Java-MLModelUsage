@@ -1,0 +1,19 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /stylesheets/*file          @controllers.Assets.at(path="/public/stylesheets",file)
+GET     /javascripts/*file          @controllers.Assets.at(path="/public/javascripts",file)
+GET     /stylesheets/images/*file          @controllers.Assets.at(path="/public/stylesheets/images",file)
+GET     /images/*file          @controllers.Assets.at(path="/public/images",file)
+
+GET     /                     controllers.HomeController.index()
+GET     /home                     controllers.HomeController.index()
++nocsrf
+POST     /paperList                     controllers.HomeController.paperList()
+GET     /paperDetails              controllers.HomeController.paperDetails()
